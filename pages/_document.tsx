@@ -1,12 +1,13 @@
 import React from 'react';
 import Document, {
   Html,
-  Head,
   Main,
   NextScript,
   DocumentContext,
   DocumentInitialProps,
+  Head,
 } from 'next/document';
+import { LINKS } from '../constants/links';
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -19,7 +20,13 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link href={LINKS.icons} rel="stylesheet" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
+import { Header } from '@/components/layout/Header';
+import { NAVBAR_LINKS } from '../constants/nabarLinks';
 
 export default function Home(): JSX.Element {
   return (
@@ -9,12 +11,13 @@ export default function Home(): JSX.Element {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1>MY APP</h1>
+      <main>
+        <Header
+          headerText="Binance.RUS"
+          links={NAVBAR_LINKS}
+          icon="monetization_on"
+        />
       </main>
-
-      <footer className={styles.footer} />
     </div>
   );
 }
