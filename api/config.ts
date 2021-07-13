@@ -5,5 +5,6 @@ export const axiosInstance = axios.create({
   headers: {
     'X-CMC_PRO_API_KEY': `2398c6aa-a3fb-47bd-97f8-130d8b8777c8`,
     'Access-Control-Allow-Origin': '*',
+    'X-RateLimit': '*',
   },
 });

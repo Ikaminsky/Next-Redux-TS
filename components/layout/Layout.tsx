@@ -4,6 +4,6 @@ interface ILayout {
   theme: 'dark' | 'light';
 }
 
-export const Layout = ({ theme }: ILayout) => {
+export const Layout: React.FC<ILayout> = ({ theme }) => {
   return <div>{theme}</div>;
 };

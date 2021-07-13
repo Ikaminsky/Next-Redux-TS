@@ -28,7 +28,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const response: AxiosResponse = await axiosInstance.get(
     'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
   );
-
   const data: ICrypto[] = response.data.data;
 
   const paths = data?.map((crypto: ICrypto) => ({
